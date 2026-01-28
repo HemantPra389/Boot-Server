@@ -14,9 +14,9 @@ SKIP_ALL=false
 
 # Package list (Display Name:Script Name)
 declare -A PACKAGES
-PACKAGES=( ["Docker"]="docker" ["NodeJS"]="node" ["Nginx"]="nginx" ["Git"]="git" )
+PACKAGES=( ["Docker"]="docker" ["NodeJS"]="node" ["Nginx"]="nginx" ["Git"]="git" ["Ngrok"]="ngrok" )
 # Order is important for asking, associative arrays are unordered in Bash 4, so we need a list
-PACKAGE_ORDER=("Docker" "NodeJS" "Nginx" "Git")
+PACKAGE_ORDER=("Docker" "NodeJS" "Nginx" "Git" "Ngrok")
 declare -A INSTALL_CHOICES
 
 usage() {
@@ -78,6 +78,7 @@ run_non_interactive() {
         INSTALL_CHOICES["NodeJS"]=${INSTALL_NODE:-false}
         INSTALL_CHOICES["Nginx"]=${INSTALL_NGINX:-false}
         INSTALL_CHOICES["Git"]=${INSTALL_GIT:-false}
+        INSTALL_CHOICES["Ngrok"]=${INSTALL_NGROK:-false}
     else
         log_warn "Config file not found at $CONFIG_FILE. No packages will be installed by default."
     fi

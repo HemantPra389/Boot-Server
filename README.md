@@ -37,6 +37,7 @@ INSTALL_DOCKER=true
 INSTALL_NODE=true
 INSTALL_NGINX=false
 INSTALL_GIT=true
+INSTALL_NGROK=true
 ```
 
 2. Run the installer:
@@ -58,7 +59,7 @@ curl -fsSL <your-repo-url>/install.sh | sudo bash
 - `install.sh`: Main entry script.
 - `scripts/`: Contains individual package installation scripts.
     - `common.sh`: Common utilities and base setup.
-    - `docker.sh`, `node.sh`, `nginx.sh`, `git.sh`: Package scripts.
+    - `docker.sh`, `node.sh`, `nginx.sh`, `git.sh`, `ngrok.sh`: Package scripts.
 
 ## Requirements
 
